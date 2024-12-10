@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Bootstrap CSS and JS, FontAwesome, and meta tags -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9af4e0e813.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* Basic styling for body */
+        body {
+            background-color: black;
+            padding: 20px;
+            color: #ffffff;
+            margin: 10px 20px;
+        }
+
+        /* Navigation bar styling */
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 40px;
+            font-weight: 600;
+            color: cyan;
+        }
+
+        .nav-logo:hover {
+            cursor: none;
+        }
+
+        .nav-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-button {
+            background-color: #ffffff;
+            color: black;
+            font-weight: 700;
+            border: none;
+            border-radius: 20px;
+            padding: 5px 20px 5px 20px;
+            outline: none;
+        }
+
+        .nav-button.onpage {
+            background-color: black;
+            color: #ffffff;
+        }
+
+        .nav-button:hover {
+            color: #ffffff;
+            background-color: black;
+            border: none;
+        }
+
+        .nav-button:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        /* Detail container styling */
+        .detail-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        .name-container {
+            display: grid;
+            justify-content: center;
+            align-items: start;
+            width: 50%;
+            position: relative;
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: transform 0.5s ease-out, opacity 1.5s ease-out;
+        }
+
+        /* Slide-in effect for name-container */
+        .name-container.slide {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .name {
+            font-size: 40px;
+        }
+
+        .intro {
+            color: cyan;
+        }
+
+        /* Profile image container styling */
+        .profile-image-container {
+            width: 50%;
+            background-color: transparent;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: relative;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-out, opacity 1.5s ease-out;
+        }
+
+        /* Slide-in effect for profile-image-container */
+        .profile-image-container.slide {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .profile-image {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            filter: drop-shadow(2px 2px 20px cyan);
+        }
+
+        /* Section slide animation */
+        .section-slide {
+            position: relative;
+            opacity: 0;
+            transform: translateY(-100%);
+            transition: transform 0.5s ease-out, opacity 1.5s ease-out;
+        }
+
+        .section-slide.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .about-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        .image-container {
+            width: 50%;
+            background-color: transparent;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+
+        .image {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            filter: drop-shadow(2px 2px 20px cyan);
+        }
+
+        .about-container {
+            display: grid;
+            justify-content: center;
+            width: 50%;
+        }
+
+        .highlights {
+            color: cyan;
+        }
+
+        .hireBtn {
+            background-color: cyan;
+            color: black;
+            font-weight: 700;
+            width: 20%;
+        }
+
+        .hireBtn:hover {
+            color: cyan;
+            background-color: black;
+            border: solid;
+            border-width: 2px;
+            border-color: cyan;
+        }
+
+        .skill-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .technicalskills {
+            width: 47%;
+            box-shadow: 2px 2px 20px cyan;
+            padding: 10px;
+            border-radius: 10px;
+            height: 580px;
+            overflow-y: scroll;
+            padding-left: 5px;
+        }
+
+        .technicalskills h5 {
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: black;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 1;
+            font-size: 24px;
+            padding-top: 10px;
+
+        }
+
+
+        .technicalskills::-webkit-scrollbar {
+            width: 2px;
+            height: 5px;
+        }
+
+        
+        .professionalskills {
+            width: 47%;
+            box-shadow: 2px 2px 20px cyan;
+            padding: 10px;
+            border-radius: 10px;
+            height: 580px;
+            overflow-y: scroll;
+            padding-left: 5px;
+        }
+
+        .professionalskills h5 {
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: black;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 1;
+            font-size: 24px;
+            padding-top: 10px;
+
+        }
+
+        .professionalskills::-webkit-scrollbar {
+            width: 2px;
+            height: 5px;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: #999;
+            transition: opacity 0.3s;
+        }
+
+        .scroll-indicator.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+
+        .techskill {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        .skill-contents {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .icon {
+            font-size: 25px;
+            margin-right: 10px;
+        }
+
+        .icon-name {
+            color: white;
+            font-size: 14px;
+            padding-top: 8px;
+        }
+        
+        .prograsive-bar {
+            width: 100%;
+            height: 6px;
+            background-color: rgb(103, 96, 96);
+            border-radius: 5px;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .prograsive-bar span {
+            display: block;
+            height: 100%;
+            background-color: #00ffff;
+            width: 0;
+            transition: width 2s ease-in-out;
+        }
+
+        .skill-percentage{
+            color: #00ffff; 
+            font-weight: bold;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-in-out 1 forwards;
+            animation-delay: 2s; /* Delay visibility by 2 seconds */
+            }
+            @keyframes fadeIn {
+                to {
+                  opacity: 1;
+                  transform: translateY(0);
+            }
+        }
+
+        .bx {
+            color: cyan;
+        }
+        .contact-link{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .contact-link:hover{
+            text-decoration: none;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        </style>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <div class="nav-bar">
+        <h2 class="nav-logo">Sanjeevan.</h2>
+        <div class="nav-container">
+            <button class="nav-button btn" onclick="display('sectionHome')" id="homeBtn">Home</button>
+            <button class="nav-button btn" onclick="display('sectionAboutMe')" id="aboutMeBtn">About Me</button>
+            <button class="nav-button btn" onclick="display('sectionSkills')" id="skillsBtn">Skills</button>
+            <button class="nav-button btn" onclick="display('sectionProjects')" id="projectsBtn">Projects</button>
+            <button class="nav-button btn" onclick="display('sectionContactMe')" id="contactMeBtn">Contact Me</button>
+        </div>
+    </div>
+
+    <!-- Home section -->
+    <div id="sectionHome" style="display: block;">
+        <div class="detail-container">
+            <div class="name-container" id="nameContainer">
+                <h3 class="name">Hi I'm Sanjeevan</h3>
+                <p class="intro">I'm a Fullstack Developer <br>And a web designer passionate about building dynamic,
+                    <br> user-friendly web applications that enhance user experiences.
+                </p>
+            </div>
+            <div class="profile-image-container" id="profileImageContainer">
+                <img class="profile-image" src="./images/profile_img.png" />
+            </div>
+        </div>
+    </div>
+
+    <!-- About Me section -->
+    <div id="sectionAboutMe" class="section-slide" style="display: none;">
+        <div class="about-details">
+            <div class="image-container">
+                <img src="./images/profile_img.png" class="image" />
+            </div>
+            <div class="about-container">
+                <h3 style="color: cyan;">Full Stack Developer!</h3>
+                <p class="about">Hello! I'm <span class="highlights"> Sanjeevan Thangaraj</span>, a dedicated student
+                    with a passion for technology and innovation. I completed my high school education at Ratnam High
+                    School, where I developed a strong foundation in the sciences and mathematics.<br> Currently, I'm
+                    pursuing my engineering studies at Priyadharshini Engineering College, where I'm honing my skills in
+                    Computer Science Engineering.<br>
+                    In addition to my academic pursuits, I'm also a student at<span class="highlights"> NXTWAVE</span>,
+                    specializing in <span class="highlights"> full-stack development</span>. This program has given me
+                    hands-on experience in building dynamic and responsive web applications, deepening my understanding
+                    of both front-end and back-end technologies.
+
+                    I'm enthusiastic about leveraging my skills to create impactful solutions and continuously learning
+                    new techniques and technologies in the ever-evolving field of software development.</p>
+                <button class="btn hireBtn" onclick="display('sectionContactMe')">Hire Me!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills section -->
+    <div id="sectionSkills" class="section-slide" style="display: none;">
+        <div class="skill-container">
+            <div class="technicalskills">
+                <h5 class="text-center" style="color: cyan;">
+                    Technical <span style="color: #ffffff;"> skills</span>
+                </h5>
+                <div class="skills-section p-4">
+                    <div class="techskill">
+                        <div class="skill-contents" style="width: 98%;">
+                            <div class="d-flex flex-row">
+                                <div class="icon"><i class='bx bxl-html5'></i></div>
+                                <div class="icon-name">HTML</div>
+                            </div>
+                            <div class="skill-percentage">95%</div>
+                        </div>
+                        <div class="prograsive-bar"><span data-percentage="95%"></span></div>
+                    </div>
+                    <div class="techskill">
+                        <div class="skill-contents" style="width: 94%;">
+                           <div  class="d-flex flex-row">
+                            <div class="icon"><i class='bx bxl-css3'></i></div>
+                            <div class="icon-name">CSS</div>
+                           </div>
+                           <div>
+                            <div class="skill-percentage">90%</div>
+                           </div>
+                        </div>
+                        <div class="prograsive-bar"><span data-percentage="90%"></span></div>
+                    </div>
+                    <div class="techskill">
+                        <div class="skill-contents" style="width: 84%;">
+                            <div class="d-flex flex-row">
+                                <div class="icon"><i class='bx bxl-javascript'></i></div>
+                            <div class="icon-name">JavaScript</div>
+                            </div>
+                            <div>
+                                <div class="skill-percentage">80%</div>
+                            </div>
+                        </div>
+                        <div class="prograsive-bar"><span data-percentage="80%"></span></div>
+                    </div>
+                    <div class="techskill">
+                        <div class="skill-contents" style="width: 94%;">
+                            <div class="d-flex flex-row">
+                                <div class="icon"><i class='bx bxl-python'></i></div>
+                            <div class="icon-name">Python</div>
+                            </div>
+                            <div>
+                                <div class="skill-percentage">90%</div>
+                            </div>
+                        </div>
+                        <div class="prograsive-bar"><span data-percentage="90%"></span></div>
+                    </div>
+                    <div class="techskill">
+                        <div class="skill-contents" style="width: 54%;">
+                            <div class="d-flex flex-row">
+                                <div class="icon"><i class='bx bxl-java'></i></div>
+                                <div class="icon-name">Java</div>
+                            </div>
+                            <div>
+                                <div class="skill-percentage">50%</div>
+                            </div>
+                        </div>
+                        <div class="prograsive-bar"><span data-percentage="50%"></span></div>
+                    </div>
+                    <div class="techskill">
+                        <div class="skill-contents" style="width: 69%;">
+                            <div class="d-flex flex-row">
+                                <div class="icon"><i class='bx bxs-data'></i></div>
+                                <div class="icon-name">SQL</div>
+                            </div>
+                            <div>
+                                <div class="skill-percentage">65%</div>
+                            </div>
+                        </div>
+                        <div class="prograsive-bar"><span data-percentage="65%"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="professionalskills">
+                <h5 class="text-center" style="color: cyan;">Professional <span style="color: #ffffff;">skills</span>
+                </h5>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects section -->
+    <div id="sectionProjects" class="section-slide" style="display: none;">
+        <h2>Projects</h2>
+    </div>
+
+    <!-- Contact Me section -->
+    <div id="sectionContactMe" class="section-slide" style="display: none;">
+        <div class="contact-container">
+            <div class="basic-contant d-flex flex-column justify-content-start">
+                <a class="contact-link"><i class='bx bx-phone-call'></i> 95029 65479</a>
+                <a class="contact-link"><i class='bx bxl-whatsapp'></i> 95029 65479</a>
+                <a class="contact-link"><i class='bx bxl-gmail'></i> sanjeevan1122003@gmail.com</a>
+                <a class="contact-link"><i class="bx bxl-instagram"></i> sanjeevan_sandy</a>
+                <a class="contact-link"><i class="bx bxl-facebook"></i> sanjeevan_sandy</a>
+                <a class="contact-link"><i class="bx bxl-twitter"></i> Sanjeevansandy</a>
+                <a class="contact-link"><i class="bx bxl-linkedin"></i> Sanjeevan Thangraj</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Display function
+        function display(sectionId) {
+            const sections = ['sectionHome', 'sectionAboutMe', 'sectionSkills', 'sectionProjects', 'sectionContactMe'];
+            const buttons = {
+                'sectionHome': 'homeBtn',
+                'sectionAboutMe': 'aboutMeBtn',
+                'sectionSkills': 'skillsBtn',
+                'sectionProjects': 'projectsBtn',
+                'sectionContactMe': 'contactMeBtn'
+            };
+
+            // Remove 'onpage' class from all buttons
+            Object.values(buttons).forEach(buttonId => {
+                document.getElementById(buttonId).classList.remove('onpage');
+            });
+
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                element.style.display = 'none';
+                element.classList.remove('show');  // Remove 'show' class from all sections
+
+                // Specific class removal for Home section
+                if (section === 'sectionHome') {
+                    document.getElementById("nameContainer").classList.remove("slide");
+                    document.getElementById("profileImageContainer").classList.remove("slide");
+                }
+            });
+
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = 'block';
+
+            // Add 'show' class to the selected section after delay
+            setTimeout(function () {
+                selectedSection.classList.add("show");
+
+                // Specific class addition for Home section
+                if (sectionId === 'sectionHome') {
+                    document.getElementById("nameContainer").classList.add("slide");
+                    document.getElementById("profileImageContainer").classList.add("slide");
+                }
+            }, 400);
+
+            // Add 'onpage' class to the corresponding button immediately
+            document.getElementById(buttons[sectionId]).classList.add('onpage');
+        }
+
+        // Initialize the Home section on page load
+        window.onload = function () {
+            display('sectionHome');
+        };
+        document.addEventListener('DOMContentLoaded', function () {
+            const skillsSection = document.getElementById('sectionSkills');
+            const progressBars = document.querySelectorAll('.prograsive-bar span');
+
+            // Set up an intersection observer
+            const observerOptions = {
+                root: null, // viewport
+                threshold: 0.2 // when 20% of the section is visible
+            };
+
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        progressBars.forEach(bar => {
+                            // Reset the width to 0 before animating again
+                            bar.style.width = '0%';
+
+                            // Allow a short delay to let the reset apply, then animate
+                            setTimeout(() => {
+                                const percentage = bar.getAttribute('data-percentage');
+                                bar.style.width = percentage;
+                            }, 100);
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            observer.observe(skillsSection);
+
+            // When the section is opened again, reset the widths and trigger the animation
+            function display(sectionId) {
+                const sections = ['sectionHome', 'sectionAboutMe', 'sectionSkills', 'sectionProjects', 'sectionContactMe'];
+                const buttons = {
+                    'sectionHome': 'homeBtn',
+                    'sectionAboutMe': 'aboutMeBtn',
+                    'sectionSkills': 'skillsBtn',
+                    'sectionProjects': 'projectsBtn',
+                    'sectionContactMe': 'contactMeBtn'
+                };
+
+                Object.values(buttons).forEach(buttonId => {
+                    document.getElementById(buttonId).classList.remove('onpage');
+                });
+
+                sections.forEach(section => {
+                    const element = document.getElementById(section);
+                    element.style.display = 'none';
+                    element.classList.remove('show');
+
+                    if (section === 'sectionHome') {
+                        document.getElementById("nameContainer").classList.remove("slide");
+                        document.getElementById("profileImageContainer").classList.remove("slide");
+                    }
+                });
+
+                const selectedSection = document.getElementById(sectionId);
+                selectedSection.style.display = 'block';
+
+                setTimeout(function () {
+                    selectedSection.classList.add("show");
+
+                    if (sectionId === 'sectionSkills') {
+                        // Reset widths before adding the section to the view
+                        progressBars.forEach(bar => bar.style.width = '0%');
+                        setTimeout(() => {
+                            progressBars.forEach(bar => {
+                                const percentage = bar.getAttribute('data-percentage');
+                                bar.style.width = percentage;
+                            });
+                        }, 100);
+                    }
+
+                    if (sectionId === 'sectionHome') {
+                        document.getElementById("nameContainer").classList.add("slide");
+                        document.getElementById("profileImageContainer").classList.add("slide");
+                    }
+                }, 400);
+
+                document.getElementById(buttons[sectionId]).classList.add('onpage');
+            }
+
+            window.onload = function () {
+                display('sectionHome');
+            };
+        });
+    </script>
+</body>
+
+</html>
