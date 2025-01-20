@@ -850,13 +850,13 @@
             font-size: 1rem;
             font-weight: 600;
             box-shadow: 2px 2px 20px cyan;
-            background-color: cyan;
+            background-color: #242222;
         }
 
         .contact-form input::placeholder,
         .contact-form textarea::placeholder {
-            color: black;
-            font-weight: 700;
+            color: cyan;
+            font-weight: 500;
         }
 
         .contact-form textarea {
@@ -885,7 +885,8 @@
             border-color: cyan;
             font-weight: 700;
         }
-        .message-for-device{
+
+        .message-for-device {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -895,16 +896,341 @@
             height: 75vh;
             text-align: center;
         }
-        .mobile{
+
+        .mobile {
             display: none;
         }
+
         @media (max-width:786px) {
-            .desktop{
+            .desktop {
                 display: none;
             }
-            .mobile{
+
+            .mobile {
                 display: block;
             }
+            body{
+                padding: 10px 5px;
+            }
+            .nav-logo{
+                font-size: 18px;
+            }
+            .mobile-profile-image-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                background-color: transparent;
+                margin-top: 30px;
+                cursor: none;
+                pointer-events: none;
+            }
+        
+        /* Slide-in effect for profile-image-container */
+        .mobile-profile-image-container.slide {
+            opacity: none;
+            transform: none;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            filter: drop-shadow(2px 2px 20px cyan);
+        }
+        .mobile-name-container{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 50px;
+        }
+        .name {
+            font-size: 20px;
+        }
+        .social-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 10px 15px;
+        }
+        .download-button{
+            padding: 3px 18px;
+            font-size: 14px;
+        }
+        .download-button:hover{
+            color:black;
+            background-color: cyan;
+            text-decoration: none;
+        }
+        .about-container {
+            display: grid;
+            justify-content: center;
+            width: 100%;
+            margin-top: 50px;
+        }
+        .about{
+            font-size: 14px;
+        }
+        .hireBtn{
+            width: 100%;
+            height: 30px;
+            font-size: 12px;
+        }
+        .hireBtn:hover {
+            background-color: cyan;
+            color: black;
+            border: solid;
+            border-width: 1px;
+            border-color: cyan;
+        }
+        .technicalskills{
+            width: 100%;
+            height: 440px;
+            padding-top: 0;
+            overflow-y: none;
+        }
+        .head-skill{
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: black;
+            text-align: center;
+            z-index: 1;
+            font-size: 18px;
+            padding-top: 20px;
+
+        }
+        .skills-section{
+            margin-top: -20px !important;
+        }
+        .techskill{
+            margin-bottom: 10px;
+        }
+        .icon {
+            color: cyan;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        .icon-name {
+            color: white;
+            font-size: 12px;
+            padding-top: 5px;
+        }
+        .skill-percentage{
+            font-size: 12px;
+        }
+        .mobile-prograsive-bar {
+            width: 100%;
+            height: 6px;
+            background-color: rgb(103, 96, 96);
+            border-radius: 5px;
+            margin-top: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        .mobile-prograsive-bar span {
+            display: block;
+            height: 100%;
+            background-color: #00ffff;
+            border-radius: 5px;
+            transition: width 2s ease-in-out;
+            transform: translateX(-100%);
+            animation: fadeIn 1s ease-in-out 1 forwards;
+            animation-delay: 1s;
+        }
+        .professionalskills{
+            margin-top: 50px;
+            width: 100%;
+            height: 380px;
+        }
+        .professionalskills-bar-graph{
+            margin: 20px 20px;
+            padding-left: 5px;
+            height: 250px;
+        }
+        .professionalskills-bar-graph .bar{
+            width: 20px;
+            margin: 0 6px;
+        }
+        .bar-professionalskill{
+            font-size: 12px;
+        }
+        .percentage-bar-graph{
+            padding-left: 20px ;
+        }
+        .percentage-bar-graph p{
+            font-size: 12px;
+            transform: translateY(20px);
+        }
+        .percentage-bar1 {
+            margin: 0 12px;
+            margin-top: 10px;
+        }
+
+        .percentage-bar2 {
+            margin: 0 -4px;
+            margin-top: 60px;
+        }
+
+        .percentage-bar3 {
+            margin: 0 11px;
+            margin-top: 36px;
+        }
+
+        .percentage-bar4 {
+            margin: 0 -3px;
+            margin-top: 86px;
+        }
+
+        .percentage-bar5 {
+            margin: 0 12px;
+            margin-top: 36px;
+        }
+
+        .percentage-bar6 {
+            margin: 0 -5px;
+            margin-top: -2px;
+        }
+        .certificates-container{
+            height: auto;
+        }
+        .certificates{
+            height: 200px;
+            padding-top: 10px;
+            padding-bottom: 2px;
+        }
+        .certificates::-webkit-scrollbar {
+            height: 8px;
+            background-color: black;
+            margin-top: 0px;
+        }
+        .certificate{
+            height: 160px;
+            width: 140px;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+        .certificate:hover {
+            height: 160px;
+            width: 140px;
+            border-radius: 5px;
+            margin: 0 10px;
+            transform: translateY(0px);
+            box-shadow: none;
+            border: solid 2px #00ffff;
+        }
+        .certificate-pre-image{
+            height: 65px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .certificate-details{
+            padding: 0 10px;
+        }
+        .certificate-heading{
+            font-size: 10px;
+            margin: 5px 0;
+        }
+        .certificate-description{
+            font-size: 7px;
+            margin: 5px 0;
+        }
+        .certificate-description span{
+            font-size: 8px !important;
+        }
+        .certificate-view-btn{
+            height: 15px;
+            width: 50%;
+            font-size: 10px;
+            border-radius: 2px;
+            margin-top: 12px;
+        }
+        .certificate-view-btn:hover{
+            background-color: cyan;
+            color: black;
+            border: none;
+        }
+        .service-card{
+            border-radius: 5px;
+            margin-top: 35px;
+            height: auto;
+        }
+        .service-card:hover {
+            transform: translateY(0px);
+            box-shadow: none;
+            box-shadow: none;
+        }
+        .service-card .icon{
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        .service-card h3{
+            font-size: 16px;
+        }
+        .service-card p{
+            font-size: 12px;
+        }
+        .contact-container{
+            height: auto;
+            margin-top: 20px;
+        }
+        .basic-contant{
+            padding: 10px 2px;
+            margin-bottom: 30px;
+        }
+        .contact{
+            border-radius: 5px;
+            margin: 7px 5px;
+            padding: 4px 12px;
+            height: 30px;
+            width: 100px;
+            font-size: 12px;
+            box-shadow: 1px 1px 10px cyan;
+        }
+        .contact:hover {
+            cursor: pointer;
+            text-decoration: none;
+            color: #00ffff;
+            background-color: transparent;
+            box-shadow: 1px 1px 10px cyan;
+            font-weight: normal;
+        }
+        .contact-form{
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 250px;
+            margin-left: 10px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            padding: 5px;
+            border: 1px solid cyan;
+            font-size: 12px;
+            font-weight: normal;
+            box-shadow: none;
+            color: cyan;
+        }
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            font-weight: normal;
+        }
+        .btn-submit{
+            padding: 3px 10px;
+            font-size: 12px;
+            margin-bottom: 30px;
+        }
+        .btn-submit:hover {
+            background-color: black;
+            color: cyan;
+            font-weight: normal;
+            border: solid;
+            border-width: 2px;
+            border-color: cyan;
+            font-weight: normal;
+        }
         }
     </style>
 </head>
@@ -920,10 +1246,11 @@
                 <button class="nav-button btn" onclick="display('sectionCertificates')"
                     id="certificatesBtn">Certificates</button>
                 <button class="nav-button btn" onclick="display('sectionProjects')" id="projectsBtn">Services</button>
-                <button class="nav-button btn" onclick="display('sectionContactMe')" id="contactMeBtn">Contact Me</button>
+                <button class="nav-button btn" onclick="display('sectionContactMe')" id="contactMeBtn">Contact
+                    Me</button>
             </div>
         </div>
-    
+
         <!-- Home section -->
         <div id="sectionHome" style="display: block;">
             <div class="detail-container">
@@ -958,7 +1285,7 @@
                     </div>
                     <a href="https://raw.githubusercontent.com/Sanjeevan1122003/portfolio/ccb8218ffd53179907277d396ad5a8e39fbe3396/sanjeevan_fullstack_dev_Resume.pdf"
                         download="Sanjeevan_Resume.pdf" class="download-button">
-                        <i class="bi bi-file-earmark-person"></i> Download Resume
+                        Download Resume
                     </a>
                 </div>
                 <div class="profile-image-container" id="profileImageContainer">
@@ -967,7 +1294,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- About Me section -->
         <div id="sectionAboutMe" class="section-slide" style="display: none;">
             <div class="about-details">
@@ -977,23 +1304,31 @@
                 </div>
                 <div class="about-container">
                     <h3 style="color: cyan;">Full Stack Developer!</h3>
-                    <p class="about">Hello! I'm <span class="highlights"> Sanjeevan Thangaraj</span>, a dedicated Engineer
-                        with a passion for technology and innovation. I completed my high school education at Ratnam High
-                        School, where I developed a strong foundation in the sciences and mathematics.<br> Currently, I'm
-                        pursuing my engineering studies at Priyadharshini Engineering College, where I'm honing my skills in
+                    <p class="about">Hello! I'm <span class="highlights"> Sanjeevan Thangaraj</span>, a dedicated
+                        Engineer
+                        with a passion for technology and innovation. I completed my high school education at Ratnam
+                        High
+                        School, where I developed a strong foundation in the sciences and mathematics.<br> Currently,
+                        I'm
+                        pursuing my engineering studies at Priyadharshini Engineering College, where I'm honing my
+                        skills in
                         Computer Science Engineering.<br>
-                        In addition to my academic pursuits, I'm also a student at<span class="highlights"> NXTWAVE</span>,
-                        specializing in <span class="highlights"> full-stack development</span>. This program has given me
-                        hands-on experience in building dynamic and responsive web applications, deepening my understanding
+                        In addition to my academic pursuits, I'm also a student at<span class="highlights">
+                            NXTWAVE</span>,
+                        specializing in <span class="highlights"> full-stack development</span>. This program has given
+                        me
+                        hands-on experience in building dynamic and responsive web applications, deepening my
+                        understanding
                         of both front-end and back-end technologies.
-    
-                        I'm enthusiastic about leveraging my skills to create impactful solutions and continuously learning
+
+                        I'm enthusiastic about leveraging my skills to create impactful solutions and continuously
+                        learning
                         new techniques and technologies in the ever-evolving field of software development.</p>
                     <button class="btn hireBtn" onclick="display('sectionContactMe')">Hire Me!</button>
                 </div>
             </div>
         </div>
-    
+
         <!-- Skills section -->
         <div id="sectionSkills" class="section-slide" style="display: none;">
             <div class="skill-container">
@@ -1075,7 +1410,8 @@
                     </div>
                 </div>
                 <div class="professionalskills">
-                    <h5 class="text-center" style="color: cyan;">Professional <span style="color: #ffffff;">skills</span>
+                    <h5 class="text-center" style="color: cyan;">Professional <span
+                            style="color: #ffffff;">skills</span>
                         <div class="percentage-bar-graph">
                             <p class="percentage-bar1">90%</p>
                             <p class="percentage-bar2">70%</p>
@@ -1112,7 +1448,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!---Certificates section-->
         <div id="sectionCertificates" class="section-slide" style="display: none; padding-top: 20px;">
             <div class="certificates-container">
@@ -1202,7 +1538,8 @@
                                 <p class="certificate-description">Technologies:<span class="highlights"
                                         style="font-size: 12px;"> PowerBI</span></p>
                                 <div class="d-flex flex-row justify-content-center">
-                                    <button class="certificate-view-btn btn open-btn mt-4" data-view="view7">View</button>
+                                    <button class="certificate-view-btn btn open-btn mt-4"
+                                        data-view="view7">View</button>
                                 </div>
                             </div>
                         </div>
@@ -1214,7 +1551,8 @@
                                 <p class="certificate-description">Technologies:<span class="highlights"
                                         style="font-size: 12px;">Kali Linux(SEtools)</span></p>
                                 <div class="d-flex flex-row justify-content-center">
-                                    <button class="certificate-view-btn btn open-btn mt-4" data-view="view8">View</button>
+                                    <button class="certificate-view-btn btn open-btn mt-4"
+                                        data-view="view8">View</button>
                                 </div>
                             </div>
                         </div>
@@ -1226,7 +1564,8 @@
                                 <p class="certificate-description">Technologies:<span class="highlights"
                                         style="font-size: 12px;">S3, Route53 and CloudFront</span></p>
                                 <div class="d-flex flex-row justify-content-center">
-                                    <button class="certificate-view-btn btn open-btn mt-1" data-view="view9">View</button>
+                                    <button class="certificate-view-btn btn open-btn mt-1"
+                                        data-view="view9">View</button>
                                 </div>
                             </div>
                         </div>
@@ -1240,7 +1579,8 @@
                                 <h5 class="certificate-heading">XPM 4.0</h5>
                                 <p class="certificate-description">Exponential performance mindset</p>
                                 <div class="d-flex flex-row justify-content-center">
-                                    <button class="certificate-view-btn btn open-btn mt-1" data-view="view10">View</button>
+                                    <button class="certificate-view-btn btn open-btn mt-1"
+                                        data-view="view10">View</button>
                                 </div>
                             </div>
                         </div>
@@ -1251,7 +1591,8 @@
                                 <h5 class="certificate-heading">7 Day Milestone</h5>
                                 <p class="certificate-description">7 days 7 Coding challenges</p>
                                 <div class="d-flex flex-row justify-content-center">
-                                    <button class="certificate-view-btn btn open-btn mt-4" data-view="view11">View</button>
+                                    <button class="certificate-view-btn btn open-btn mt-4"
+                                        data-view="view11">View</button>
                                 </div>
                             </div>
                         </div>
@@ -1259,7 +1600,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Services section -->
         <div id="sectionProjects" class="section-slide" style="display: none;">
             <div class="services-section text-center">
@@ -1275,7 +1616,8 @@
                                 <h3><span class="highlights">Frontend</span> Development</h3>
                                 <p>Crafting responsive and interactive user interfaces with <span
                                         class="highlights">HTML</span>, <span class="highlights">CSS</span>, <span
-                                        class="highlights">Bootstrap</span>, and <span class="highlights">JavaScript</span>
+                                        class="highlights">Bootstrap</span>, and <span
+                                        class="highlights">JavaScript</span>
                                     to deliver engaging user experiences.</p>
                             </div>
                         </div>
@@ -1287,8 +1629,8 @@
                                 </div>
                                 <h3><span class="highlights">Backend</span> Development</h3>
                                 <p>Building secure, scalable, and efficient server-side solutions with <span
-                                        class="highlights">NodeJs</span>, <span class="highlights">ExpressJs</span>, <span
-                                        class="highlights">Python</span> and database management systems like <span
+                                        class="highlights">NodeJs</span>, <span class="highlights">ExpressJs</span>,
+                                    <span class="highlights">Python</span> and database management systems like <span
                                         class="highlights">SQL</span>.</p>
                             </div>
                         </div>
@@ -1299,7 +1641,8 @@
                                     <i class="bi bi-globe"></i>
                                 </div>
                                 <h3><span class="highlights">Full-Stack</span> Development</h3>
-                                <p>Providing end-to-end web solutions by integrating responsive frontend design with robust
+                                <p>Providing end-to-end web solutions by integrating responsive frontend design with
+                                    robust
                                     backend architecture.</p>
                             </div>
                         </div>
@@ -1307,7 +1650,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Contact Me section -->
         <div id="sectionContactMe" class="section-slide" style="display: none;">
             <div class="contact-container">
@@ -1336,12 +1679,12 @@
                                 target="_blank" class="contact">
                                 <i class="fas fa-envelope"></i> Email
                             </a>
-                            <a href="https://wa.me/919502965479" target="_blank" class="contact"><i
+                            <a href="https://wa.me/9502965479" target="_blank" class="contact"><i
                                     class="fa-brands fa-whatsapp"></i> Whatsapp</a>
                         </div>
                         <a href="https://raw.githubusercontent.com/Sanjeevan1122003/portfolio/ccb8218ffd53179907277d396ad5a8e39fbe3396/sanjeevan_fullstack_dev_Resume.pdf"
                             download="Sanjeevan_Resume.pdf" class="contact" style="width: 100%;">
-                            <i class="bi bi-file-earmark-person"></i> Download Resume
+                            Download Resume
                         </a>
                     </div>
                 </div>
@@ -1364,10 +1707,10 @@
                     </form>
                 </div>
             </div>
-    
+
         </div>
         <div class="overlay" id="overlay"></div>
-    
+
         <div id="view1" class="view" style="display: none;">
             <div class="view-content">
                 <span id="closeViewBtn" class="close-btn">&times;</span>
@@ -1447,11 +1790,440 @@
         </div>
     </div>
     <div class="mobile">
-        <div class="message-for-device">
-            <i class="bi bi-emoji-frown mb-5" style="font-size: 50px;"></i>
-            <h6>The Mobile Version of this content is not developed still!
-                So please use the desktop version for better experience.</h6>
+        <div class="nav-bar">
+            <h2 class="nav-logo">Portfolio.</h2>
         </div>
+        <div class="mobile-profile-image-container">
+            <img class="profile-image"
+                src="https://github.com/Sanjeevan1122003/portfolio/blob/main/profile_img.png?raw=true" />
+        </div>
+        <div class="mobile-name-container">
+            <h3 class="name">Hi I'm Sanjeevan</h3>
+            <p class="intro">I'm a Fullstack Developer <br>And a web designer passionate about building dynamic,
+                <br> user-friendly web applications that enhance user experiences.
+            </p>
+            <div class="d-flex flex-row justify-content-start">
+                <div class="social-container">
+                    <a href="https://www.instagram.com/sanjeevan_sandy" target="_blank" class="home-contact">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="social-container">
+                    <a href="https://www.facebook.com/profile.php?id=100011845267638" target="_blank"
+                        class="home-contact">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+                <div class="social-container">
+                    <a href="https://www.linkedin.com/in/sanjeevan-thangaraj-51b70928a/" target="_blank"
+                        class="home-contact">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <div class="social-container">
+                    <a href="https://x.com/SanjeevanSandy" target="_blank" class="home-contact">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <a href="https://raw.githubusercontent.com/Sanjeevan1122003/portfolio/ccb8218ffd53179907277d396ad5a8e39fbe3396/sanjeevan_fullstack_dev_Resume.pdf"
+                download="Sanjeevan_Resume.pdf" class="download-button">
+                <i class="bi bi-file-earmark-person"></i> Download Resume
+            </a>
+        </div>
+        <div class="about-container">
+            <h4 class="mb-4" style="text-decoration: underline; text-decoration-color: cyan;">About <span class="highlights">Me:</span> </h4>
+            <h5 style="color: cyan;">Full Stack Developer!</h5>
+            <p class="about">Hello! I'm <span class="highlights"> Sanjeevan Thangaraj</span>, a dedicated
+                Engineer
+                with a passion for technology and innovation. I completed my high school education at Ratnam
+                High
+                School, where I developed a strong foundation in the sciences and mathematics.<br> Currently,
+                I'm
+                pursuing my engineering studies at Priyadharshini Engineering College, where I'm honing my
+                skills in
+                Computer Science Engineering.<br>
+                In addition to my academic pursuits, I'm also a student at<span class="highlights">
+                    NXTWAVE</span>,
+                specializing in <span class="highlights"> full-stack development</span>. This program has given
+                me
+                hands-on experience in building dynamic and responsive web applications, deepening my
+                understanding
+                of both front-end and back-end technologies.
+
+                I'm enthusiastic about leveraging my skills to create impactful solutions and continuously
+                learning
+                new techniques and technologies in the ever-evolving field of software development.</p>
+            <button class="btn hireBtn" onclick="display('sectionContactMe')">Hire Me!</button>
+        </div>
+        <h4 class="mb-4 mt-5" style="text-decoration: underline; text-decoration-color: cyan;">My <span class="highlights">Skills :</span> </h4>
+        <div class="technicalskills">
+            <p class="text-center head-skill" style="color: cyan;">
+                Technical <span style="color: #ffffff;"> skills</span>
+            </p>
+            <div class="skills-section p-4">
+                <div class="techskill">
+                    <div class="skill-contents" style="width: 98%;">
+                        <div class="d-flex flex-row">
+                            <div class="icon"><i class='bx bxl-html5'></i></div>
+                            <div class="icon-name">HTML</div>
+                        </div>
+                        <div class="skill-percentage">95%</div>
+                    </div>
+                    <div class="mobile-prograsive-bar" ><span data-percentage="95%" style="width: 95%;"></span></div>
+                </div>
+                <div class="techskill">
+                    <div class="skill-contents" style="width: 94%;">
+                        <div class="d-flex flex-row">
+                            <div class="icon"><i class='bx bxl-css3'></i></div>
+                            <div class="icon-name">CSS</div>
+                        </div>
+                        <div>
+                            <div class="skill-percentage">90%</div>
+                        </div>
+                    </div>
+                    <div class="mobile-prograsive-bar"><span data-percentage="90%" style="width: 90%;"></span></div>
+                </div>
+                <div class="techskill">
+                    <div class="skill-contents" style="width: 84%;">
+                        <div class="d-flex flex-row">
+                            <div class="icon"><i class='bx bxl-javascript'></i></div>
+                            <div class="icon-name">JavaScript</div>
+                        </div>
+                        <div>
+                            <div class="skill-percentage">80%</div>
+                        </div>
+                    </div>
+                    <div class="mobile-prograsive-bar"><span data-percentage="80%" style="width: 80%;"></span></div>
+                </div>
+                <div class="techskill">
+                    <div class="skill-contents" style="width: 94%;">
+                        <div class="d-flex flex-row">
+                            <div class="icon"><i class='bx bxl-python'></i></div>
+                            <div class="icon-name">Python</div>
+                        </div>
+                        <div>
+                            <div class="skill-percentage">90%</div>
+                        </div>
+                    </div>
+                    <div class="mobile-prograsive-bar"><span data-percentage="90%" style="width: 90%;"></span></div>
+                </div>
+                <div class="techskill">
+                    <div class="skill-contents" style="width: 54%;">
+                        <div class="d-flex flex-row">
+                            <div class="icon"><i class='bx bxl-java'></i></div>
+                            <div class="icon-name">Java</div>
+                        </div>
+                        <div>
+                            <div class="skill-percentage">50%</div>
+                        </div>
+                    </div>
+                    <div class="mobile-prograsive-bar"><span data-percentage="50%" style="width: 50%;"></span></div>
+                </div>
+                <div class="techskill">
+                    <div class="skill-contents" style="width: 69%;">
+                        <div class="d-flex flex-row">
+                            <div class="icon"><i class='bx bxs-data'></i></div>
+                            <div class="icon-name">SQL</div>
+                        </div>
+                        <div>
+                            <div class="skill-percentage">65%</div>
+                        </div>
+                    </div>
+                    <div class="mobile-prograsive-bar"><span data-percentage="65%" style="width: 65%;"></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="professionalskills">
+            <p class="text-center head-skill" style="color: cyan;">Professional <span
+                    style="color: #ffffff;">skills</span></p>
+                <div class="percentage-bar-graph">
+                    <p class="percentage-bar1">90%</p>
+                    <p class="percentage-bar2">70%</p>
+                    <p class="percentage-bar3">80%</p>
+                    <p class="percentage-bar4">60%</p>
+                    <p class="percentage-bar5">80%</p>
+                    <p class="percentage-bar6">95%</p>
+                </div>
+                <div class="professionalskills-bar-graph">
+                    <div class="bar bar1"> <!---communication--->
+                        <p class="bar-professionalskill">Communication</p>
+                    </div>
+                    <div class="bar bar2"><!---Team work--->
+                        <p class="bar-professionalskill">TeamWork</span></p>
+                    </div>
+                    <div class="bar bar3"><!---Smart working--->
+                        <p class="bar-professionalskill">SmartWork</p>
+                    </div>
+                    <div class="bar bar4"><!---Time management--->
+                        <p class="bar-professionalskill">TimeManagement</p>
+                    </div>
+                    <div class="bar bar5"><!---Adaptbulity--->
+                        <p class="bar-professionalskill">Adaptability</p>
+                    </div>
+                    <div class="bar bar6"><!---creativethinking--->
+                        <p class="bar-professionalskill">CreativeThinking</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-center skill-percentage"
+                    style="margin-top: -15px; font-size: 14px; color: #ffffff;">
+                    <p>Skills</p>
+                </div>
+            </h5>
+        </div>
+        <h4 class="mb-4 mt-5" style="text-decoration: underline; text-decoration-color: cyan;">My <span class="highlights">Certificates :</span> </h4>
+        <div class="certificates-container">
+            <div>
+                <p><span class="highlights head-skill">Course</span> Certificates</p>
+                <div class="certificates">
+                    <div class="certificate">
+                        <img src="https://github.com/Sanjeevan1122003/portfolio/blob/main/HTML-CSS-Bootstrap.png?raw=true"
+                            class="certificate-pre-image" />
+                        <div class="certificate-details">
+                            <h5 class="certificate-heading">Static Website Course</h5>
+                            <p class="certificate-description">Technologies:<span class="highlights"
+                                    style="font-size: 12px;"> HTMl, CSS, Bootstrap</span></p>
+                            <div class="d-flex flex-row justify-content-center">
+                                <button class="certificate-view-btn btn open-btn" data-view="view1">View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate">
+                        <img src="https://github.com/Sanjeevan1122003/portfolio/blob/main/Bootstrap-flexbox.png?raw=true"
+                            class="certificate-pre-image" />
+                        <div class="certificate-details">
+                            <h5 class="certificate-heading">Responsive Website <br>Course</h5>
+                            <p class="certificate-description">Technologies:<span class="highlights"
+                                    style="font-size: 12px;"> Bootstrap(Flexbox)</span></p>
+                            <div class="d-flex flex-row justify-content-center">
+                                <button class="certificate-view-btn btn open-btn" data-view="view2">View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate">
+                        <img src="https://github.com/Sanjeevan1122003/portfolio/blob/main/CSS-Felxbox.png?raw=true"
+                            class="certificate-pre-image" />
+                        <div class="certificate-details">
+                            <h5 class="certificate-heading">Responsive Web Design Course</h5>
+                            <p class="certificate-description">Technologies:<span class="highlights"
+                                    style="font-size: 12px;"> CSS(Flexbox)</span></p>
+                            <div class="d-flex flex-row justify-content-center">
+                                <button class="certificate-view-btn btn open-btn" data-view="view3">View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate">
+                        <img src="https://github.com/Sanjeevan1122003/portfolio/blob/main/JavaScript.png?raw=true"
+                            class="certificate-pre-image" />
+                        <div class="certificate-details">
+                            <h5 class="certificate-heading">Dynamic Web Application Course</h5>
+                            <p class="certificate-description">Technologies:<span class="highlights"
+                                    style="font-size: 12px;"> JavaScript</span></p>
+                            <div class="d-flex flex-row justify-content-center">
+                                <button class="certificate-view-btn btn open-btn" data-view="view4">View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate">
+                        <img src="https://github.com/Sanjeevan1122003/portfolio/blob/main/SQL.png?raw=true"
+                            class="certificate-pre-image" />
+                        <div class="certificate-details">
+                            <h5 class="certificate-heading">Introduction to Database Course</h5>
+                            <p class="certificate-description">Technologies:<span class="highlights"
+                                    style="font-size: 12px;"> SQL</span></p>
+                            <div class="d-flex flex-row justify-content-center">
+                                <button class="certificate-view-btn btn open-btn" data-view="view5">View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate">
+                        <img src="https://github.com/Sanjeevan1122003/portfolio/blob/main/SQL.png?raw=true"
+                            class="certificate-pre-image" />
+                        <div class="certificate-details">
+                            <h5 class="certificate-heading">Python Programming Course</h5>
+                            <p class="certificate-description">Technologies:<span class="highlights"
+                                    style="font-size: 12px;"> Python</span></p>
+                            <div class="d-flex flex-row justify-content-center">
+                                <button class="certificate-view-btn btn open-btn" data-view="view6">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p><span class="highlights head-skill">Workshops</span> Certificates</p>
+                <div class="certificates">
+                    <div class="certificate">
+                        <img src="https://github.com/Sanjeevan1122003/portfolio/blob/main/Data-analytics.png?raw=true"
+                            class="certificate-pre-image" />
+                        <div class="certificate-details">
+                            <h5 class="certificate-heading">Data Analytics workshop </h5>
+                            <p class="certificate-description">Technologies:<span class="highlights"
+                                    style="font-size: 12px;"> PowerBI</span></p>
+                            <div class="d-flex flex-row justify-content-center">
+                                <button class="certificate-view-btn btn open-btn mt-4"
+                                    data-view="view7">View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate">
+                        <img src="https://github.com/Sanjeevan1122003/portfolio/blob/main/Ethical%20hacking%20certificate%20.png?raw=true"
+                            class="certificate-pre-image" />
+                        <div class="certificate-details">
+                            <h5 class="certificate-heading">Ethical Hacking Workshop</h5>
+                            <p class="certificate-description">Technologies:<span class="highlights"
+                                    style="font-size: 12px;">Kali Linux(SEtools)</span></p>
+                            <div class="d-flex flex-row justify-content-center">
+                                <button class="certificate-view-btn btn open-btn mt-2"
+                                    data-view="view8">View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate">
+                        <img src="https://github.com/Sanjeevan1122003/portfolio/blob/main/AWS%20workshop%20.png?raw=true"
+                            class="certificate-pre-image" />
+                        <div class="certificate-details">
+                            <h5 class="certificate-heading">AWS Workshop</h5>
+                            <p class="certificate-description">Technologies:<span class="highlights"
+                                    style="font-size: 12px;">S3, Route53 and CloudFront</span></p>
+                            <div class="d-flex flex-row justify-content-center">
+                                <button class="certificate-view-btn btn open-btn mt-2"
+                                    data-view="view9">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p><span class="highlights head-skill">Activites</span> Certificates</p>
+                <div class="certificates">
+                    <div class="certificate">
+                        <img src="https://github.com/Sanjeevan1122003/portfolio/blob/main/XPM-4.0.png?raw=true"
+                            class="certificate-pre-image" />
+                        <div class="certificate-details">
+                            <h5 class="certificate-heading">XPM 4.0</h5>
+                            <p class="certificate-description">Exponential performance mindset</p>
+                            <div class="d-flex flex-row justify-content-center">
+                                <button class="certificate-view-btn btn open-btn mt-4"
+                                    data-view="view10">View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate">
+                        <img src="https://github.com/Sanjeevan1122003/portfolio/blob/main/7%20days%20coding%20challenge%20.png?raw=true"
+                            class="certificate-pre-image" />
+                        <div class="certificate-details">
+                            <h5 class="certificate-heading">7 Day Milestone</h5>
+                            <p class="certificate-description">7 days 7 Coding challenges</p>
+                            <div class="d-flex flex-row justify-content-center">
+                                <button class="certificate-view-btn btn open-btn mt-4"
+                                    data-view="view11">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4 class="mb-1 mt-5" style="text-decoration: underline; text-decoration-color: cyan;">My <span class="highlights">Services :</span> </h4>
+        <div class="services-section text-center">
+            <div class="container">
+                <div class="row g-2">
+                    <!-- Frontend Development Card -->
+                    <div class="col-md-4">
+                        <div class="service-card p-4">
+                            <div class="icon">
+                                <i class="bi bi-laptop"></i>
+                            </div>
+                            <h3><span class="highlights">Frontend</span> Development</h3>
+                            <p>Crafting responsive and interactive user interfaces with <span
+                                    class="highlights">HTML</span>, <span class="highlights">CSS</span>, <span
+                                    class="highlights">Bootstrap</span>, and <span
+                                    class="highlights">JavaScript</span>
+                                to deliver engaging user experiences.</p>
+                        </div>
+                    </div>
+                    <!-- Backend Development Card -->
+                    <div class="col-md-4">
+                        <div class="service-card p-4">
+                            <div class="icon">
+                                <i class="bi bi-server"></i>
+                            </div>
+                            <h3><span class="highlights">Backend</span> Development</h3>
+                            <p>Building secure, scalable, and efficient server-side solutions with <span
+                                    class="highlights">NodeJs</span>, <span class="highlights">ExpressJs</span>,
+                                <span class="highlights">Python</span> and database management systems like <span
+                                    class="highlights">SQL</span>.</p>
+                        </div>
+                    </div>
+                    <!-- Full-Stack Development Card -->
+                    <div class="col-md-4">
+                        <div class="service-card p-4">
+                            <div class="icon">
+                                <i class="bi bi-globe"></i>
+                            </div>
+                            <h3><span class="highlights">Full-Stack</span> Development</h3>
+                            <p>Providing end-to-end web solutions by integrating responsive frontend design with
+                                robust
+                                backend architecture.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4 class="mb-1 mt-5" style="text-decoration: underline; text-decoration-color: cyan;">MY <span class="highlights">Contact :</span> </h4>
+        <section id="contactMe">
+            <div class="contact-container">
+                <div class="contact-content">
+                    <div class="basic-contant">
+                        <div class="d-flex flex-row justify-content-center">
+                            <a href="https://www.instagram.com/sanjeevan_sandy" target="_blank" class="contact">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=100011845267638" target="_blank"
+                                class="contact">
+                                <i class="fab fa-facebook-f"></i> Facebook
+                            </a>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center">
+                            <a href="https://www.linkedin.com/in/sanjeevan-thangaraj-51b70928a/" target="_blank"
+                                class="contact">
+                                <i class="fab fa-linkedin-in"></i> LinkedIn
+                            </a>
+                            <a href="https://x.com/SanjeevanSandy" target="_blank" class="contact">
+                                <i class="fab fa-twitter"></i> Twitter
+                            </a>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center">
+                            <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=sanjeevan1122003@gmail.com"
+                                target="_blank" class="contact">
+                                <i class="fas fa-envelope"></i> Email
+                            </a>
+                            <a href="https://wa.me/9502965479" target="_blank" class="contact"><i
+                                    class="fa-brands fa-whatsapp"></i> Whatsapp</a>
+                        </div>
+                        <a href="https://raw.githubusercontent.com/Sanjeevan1122003/portfolio/ccb8218ffd53179907277d396ad5a8e39fbe3396/sanjeevan_fullstack_dev_Resume.pdf"
+                            download="Sanjeevan_Resume.pdf" class="contact" style="width: 100%;">
+                            <i class="bi bi-file-earmark-person"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit"
+                        method="POST">
+                        <!-- Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="36b824fa-566b-49bc-a615-1ec8b43fc0b4" />
+
+                        <!-- Form Fields -->
+                        <input type="text" name="name" placeholder="Your Name" required />
+                        <input type="email" name="email" placeholder="Your Email" required />
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+                        <!-- Honeypot Spam Protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
     </div>
     <script>
         // Display function
@@ -1601,28 +2373,30 @@
         const overlay = document.getElementById('overlay');
 
 
+        // Open the corresponding view when an open button is clicked
         openButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const targetViewId = button.getAttribute('data-view');
                 const targetView = document.getElementById(targetViewId);
                 targetView.style.display = 'flex';
-                overlay.style.display = 'block'; 
+                overlay.style.display = 'block'; // Show the overlay
             });
         });
 
-        
+        // Close the view when the close button inside the view is clicked
         views.forEach(view => {
             const closeButton = view.querySelector('.close-btn');
             closeButton.addEventListener('click', () => {
                 view.style.display = 'none';
-                overlay.style.display = 'none'; 
+                overlay.style.display = 'none'; // Hide the overlay
             });
         });
 
+        // Close the view if clicking outside the view (on the overlay)
         window.addEventListener('click', (event) => {
             if (event.target === overlay) {
                 views.forEach(view => (view.style.display = 'none'));
-                overlay.style.display = 'none'; 
+                overlay.style.display = 'none'; // Hide the overlay
             }
         });
 
@@ -1634,6 +2408,9 @@
             e.preventDefault();
         });
     </script>
+</body>
+
+</html>
 </body>
 
 </html>
