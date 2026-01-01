@@ -558,6 +558,26 @@
             margin-top: 40px;
         }
 
+        .projects-container {
+            width: 100%;
+            height: 81vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            margin-right: 40px;
+        }
+
+        .projects-preview {
+            width: 100%;
+            height: 50%;
+        }
+
+        .projects-preview img {
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
         .certificates-container {
             width: 100%;
             height: 81vh;
@@ -568,26 +588,31 @@
 
         }
 
-        .certificates-container::-webkit-scrollbar {
+        .certificates-container::-webkit-scrollbar,
+        .projects-container::-webkit-scrollbar {
             width: 8px;
             background-color: black;
         }
 
-        .certificates-container::-webkit-scrollbar-thumb {
+        .certificates-container::-webkit-scrollbar-thumb,
+        .projects-container::-webkit-scrollbar-thumb {
             background-color: cyan;
             border-radius: 10px;
             border: 2px solid black;
         }
 
-        .certificates-container::-webkit-scrollbar-thumb:hover {
+        .certificates-container::-webkit-scrollbar-thumb:hover,
+        .projects-container::-webkit-scrollbar-thumb:hover {
             background-color: #00ffff;
             cursor: grabbing;
         }
 
-        .certificates::-webkit-scrollbar-track {
+        .certificates-container::-webkit-scrollbar-track,
+        .projects-container::-webkit-scrollbar-track {
             background-color: rgb(70, 70, 70);
             border-radius: 10px;
         }
+
 
         .certificates {
             width: 95%;
@@ -756,7 +781,8 @@
             border-radius: 10px;
             transition: transform 0.3s, box-shadow 0.3s;
             background-color: #242222;
-            height: 300px;
+            height: auto;
+            width: 380px;
             margin-top: 70px;
         }
 
@@ -1321,7 +1347,7 @@
                 <button class="nav-button btn" onclick="display('sectionSkills')" id="skillsBtn">Skills</button>
                 <button class="nav-button btn" onclick="display('sectionCertificates')"
                     id="certificatesBtn">Certificates</button>
-                <button class="nav-button btn" onclick="display('sectionProjects')" id="projectsBtn">Services</button>
+                <button class="nav-button btn" onclick="display('sectionProjects')" id="projectsBtn">Projects</button>
                 <button class="nav-button btn" onclick="display('sectionContactMe')" id="contactMeBtn">Contact
                     Me</button>
             </div>
@@ -1764,51 +1790,163 @@
             </div>
         </div>
 
-        <!-- Services section -->
+        <!-- Projects section -->
         <div id="sectionProjects" class="section-slide" style="display: none;">
-            <div class="services-section text-center">
-                <div class="container">
-                    <h2 class="mb-5">My <span class="highlights">Services</span></h2>
-                    <div class="row g-4 mt-5">
-                        <!-- Frontend Development Card -->
-                        <div class="col-md-4">
-                            <div class="service-card p-4">
-                                <div class="icon">
-                                    <i class="bi bi-laptop"></i>
+            <div class="services-section text-left">
+                <div class="projects-container">
+                    <h4 class="mt-5">My <span class="highlights">Projects</span></h4>
+                    <div class="row mt-2">
+                        <div class="col-lg-4 col-md-3">
+                            <a href="https://clove-dental.sanjeevantech.com/" target="_blank"
+                                style="text-decoration: none;">
+                                <div class="service-card">
+                                    <div class="projects-preview">
+                                        <img
+                                            src="https://github.com/Sanjeevan1122003/portfolio/blob/603e97793b024a819cd0efd13cff593bca9a69e2/Clove%20dental.png?raw=true" />
+                                    </div>
+                                    <div class="p-4">
+                                        <h3><span class="highlights">Clove </span>Dental</h3>
+                                        <p>I built a responsive Clove Dental website that showcases treatments, doctors,
+                                            and clinics with simple appointment booking and clear calls-to-action. It
+                                            focuses on trust, usability, and performance across devices, and is
+                                            developed
+                                            using<span class="highlights">HTML5, CSS3, and JavaScript</span> with a
+                                            lightweight CMS backend</p>
+                                    </div>
                                 </div>
-                                <h3><span class="highlights">Frontend</span> Development</h3>
-                                <p>Crafting responsive and interactive user interfaces with <span
-                                        class="highlights">HTML</span>, <span class="highlights">CSS</span>, <span
-                                        class="highlights">Bootstrap</span>, and <span
-                                        class="highlights">JavaScript</span>
-                                    to deliver engaging user experiences.</p>
-                            </div>
+                            </a>
                         </div>
-                        <!-- Backend Development Card -->
-                        <div class="col-md-4">
-                            <div class="service-card p-4">
-                                <div class="icon">
-                                    <i class="bi bi-server"></i>
+                        <div class="col-lg-4  col-md-3">
+                            <a href="https://leo-fashion-store.sanjeevantech.com/" target="_blank"
+                                style="text-decoration: none;">
+                                <div class="service-card">
+                                    <div class="projects-preview">
+                                        <img
+                                            src="https://github.com/Sanjeevan1122003/portfolio/blob/main/LEO%20fashion%20store.png?raw=true" />
+                                    </div>
+                                    <div class="p-4">
+                                        <h3><span class="highlights">LEO </span>Fashion Store</h3>
+                                        <p>
+                                            I developed a responsive e-commerce Product Listing Page using
+                                            <span class="highlights">React.js</span> and
+                                            <span class="highlights">CSS</span>. It integrates the
+                                            <span class="highlights">FakeStore API</span> with filtering, sorting, and
+                                            search, while maintaining strong
+                                            <span class="highlights">SEO</span>,
+                                            <span class="highlights">Accessibility</span>, and
+                                            <span class="highlights">Performance</span>. Deployed on
+                                            <span class="highlights">Netlify</span> with clean, modular
+                                            <span class="highlights">React Components</span>.
+                                        </p>
+
+                                    </div>
                                 </div>
-                                <h3><span class="highlights">Backend</span> Development</h3>
-                                <p>Building secure, scalable, and efficient server-side solutions with <span
-                                        class="highlights">NodeJs</span>, <span class="highlights">ExpressJs</span>,
-                                    <span class="highlights">Python</span> and database management systems like <span
-                                        class="highlights">SQL</span>.
-                                </p>
-                            </div>
+                            </a>
                         </div>
-                        <!-- Full-Stack Development Card -->
-                        <div class="col-md-4">
-                            <div class="service-card p-4">
-                                <div class="icon">
-                                    <i class="bi bi-globe"></i>
+                        <div class="col-lg-4  col-md-3">
+                            <a href="https://products-showcase.sanjeevantech.com/" target="_blank"
+                                style="text-decoration: none;">
+                                <div class="service-card">
+                                    <div class="projects-preview">
+                                        <img
+                                            src="https://github.com/Sanjeevan1122003/portfolio/blob/main/Product%20showcase.png?raw=true" />
+                                    </div>
+                                    <div class="p-4">
+                                        <h3><span class="highlights">Products </span>Showcase</h3>
+                                        <p>
+                                            I built a full-stack Product Showcase & Enquiry System using
+                                            <span class="highlights">React</span>,
+                                            <span class="highlights">Node.js / Express</span>, and
+                                            <span class="highlights">SQLite</span>. Users can browse products, view
+                                            details, and submit enquiries, while admins manage all submissions. The
+                                            system includes search, filters, pagination, and secure
+                                            <span class="highlights">REST APIs</span> with a clean, modular
+                                            architecture.
+                                        </p>
+
+                                    </div>
                                 </div>
-                                <h3><span class="highlights">Full-Stack</span> Development</h3>
-                                <p>Providing end-to-end web solutions by integrating responsive frontend design with
-                                    robust
-                                    backend architecture.</p>
-                            </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-3">
+                            <a href="https://resumemaker.sanjeevantech.com/" target="_blank"
+                                style="text-decoration: none;">
+                                <div class="service-card">
+                                    <div class="projects-preview">
+                                        <img
+                                            src="https://github.com/Sanjeevan1122003/portfolio/blob/main/Resume%20maker.png?raw=true" />
+                                    </div>
+                                    <div class="p-4">
+                                        <h3><span class="highlights">Resume </span>Maker</h3>
+                                        <p>
+                                            I developed a dynamic Resume Maker application using
+                                            <span class="highlights">React.js</span> (earlier HTML/JS version), with
+                                            data storage via
+                                            <span class="highlights">PostgreSQL</span> and
+                                            <span class="highlights">Node.js</span>. Users can build resumes with
+                                            editable sections, live preview, multiple templates, and export to PDF using
+                                            <span class="highlights">html2pdf.js</span>. It supports dynamic fields,
+                                            autosave, and real-time validation with a clean, user-friendly interface.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-3">
+                            <a href="https://expensetracker.sanjeevantech.com/" target="_blank"
+                                style="text-decoration: none;">
+                                <div class="service-card">
+                                    <div class="projects-preview">
+                                        <img
+                                            src="https://github.com/Sanjeevan1122003/portfolio/blob/main/Expense%20tracker.png?raw=true" />
+                                    </div>
+                                    <div class="p-4">
+                                        <h3><span class="highlights">Expense </span>Tracker</h3>
+                                        <p>
+                                            I built a modern Expense Tracker application using
+                                            <span class="highlights">React</span> with
+                                            <span class="highlights">Vite</span> for fast builds, styled with
+                                            <span class="highlights">Tailwind CSS</span> and
+                                            shadcn/ui, along with
+                                            <span class="highlights">Radix UI</span> components. Interactive charts are
+                                            powered by
+                                            <span class="highlights">Recharts</span>, icons by
+                                            Lucide, and the app is configured as a
+                                            PWA with proper
+                                            <span class="highlights">Open Graph</span> metadata for sharing. The result
+                                            is a responsive, fast, and user-friendly finance dashboard for tracking
+                                            expenses and insights.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-3">
+                            <a href="https://sportsfacility.sanjeevantech.com/" target="_blank"
+                                style="text-decoration: none;">
+                                <div class="service-card">
+                                    <div class="projects-preview">
+                                        <img
+                                            src="https://github.com/Sanjeevan1122003/portfolio/blob/main/Sport%20facility.png?raw=true" />
+                                    </div>
+                                    <div class="p-4">
+                                        <h3><span class="highlights">Sports </span>Facility</h3>
+                                        <p>
+                                            I developed a full-stack Sports Facility Booking Platform using
+                                            <span class="highlights">React</span>,
+                                            <span class="highlights">Node.js / Express</span>, and
+                                            <span class="highlights">MongoDB</span>. It supports secure
+                                            <span class="highlights">JWT</span> authentication. The platform includes
+                                            secure APIs, role-based access, and a clean modular architecture.
+                                            <span class="highlights">Admin Dashboard</span> with charts powered by
+                                            <span class="highlights">Recharts</span>The platform includes secure APIs,
+                                            role-based access, and a clean modular architecture.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -2369,17 +2507,17 @@
                         </div>
                     </div>
                     <div class="certificate">
-                            <img src="https://github.com/Sanjeevan1122003/portfolio/blob/main/Teachning%20assistant.png?raw=true"
-                                class="certificate-pre-image" />
-                            <div class="certificate-details">
-                                <h5 class="certificate-heading">Teachning Assistant</h5>
-                                <p class="certificate-description">Teachning Assistant Internship from NXTWAVE</p>
-                                <div class="d-flex flex-row justify-content-center">
-                                    <button class="certificate-view-btn btn open-btn mt-1"
-                                        data-view="mobile-view16">View</button>
-                                </div>
+                        <img src="https://github.com/Sanjeevan1122003/portfolio/blob/main/Teachning%20assistant.png?raw=true"
+                            class="certificate-pre-image" />
+                        <div class="certificate-details">
+                            <h5 class="certificate-heading">Teachning Assistant</h5>
+                            <p class="certificate-description">Teachning Assistant Internship from NXTWAVE</p>
+                            <div class="d-flex flex-row justify-content-center">
+                                <button class="certificate-view-btn btn open-btn mt-1"
+                                    data-view="mobile-view16">View</button>
                             </div>
                         </div>
+                    </div>
                 </div>
                 <p><span class="highlights">Activites</span> Certificates</p>
                 <div class="certificates">
