@@ -189,6 +189,9 @@
             width: 400px;
             height: 400px;
             border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
             filter: drop-shadow(2px 2px 20px cyan);
         }
 
@@ -226,6 +229,9 @@
             width: 400px;
             height: 400px;
             border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
             filter: drop-shadow(2px 2px 20px cyan);
         }
 
